@@ -251,6 +251,10 @@ footer {
   background-color: #080808;
 }
 
+main > section#faixa-confianca {
+  background-color: var(--gold) !important;
+}
+
 main > section:nth-child(2) .card-lux,
 main > section:nth-child(4) .card-lux,
 main > section:nth-child(6) .card-lux,

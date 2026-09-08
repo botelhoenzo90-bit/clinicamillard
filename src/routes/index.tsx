@@ -205,7 +205,7 @@ function Trust() {
     { icon: ScanLine, short: "Procedimentos Inovadores" },
   ];
   return (
-    <section className="border-y border-gold bg-gold">
+    <section id="faixa-confianca" className="border-y border-gold bg-gold">
       <div className="bg-gold sm:hidden">
         <Marquee speed={18} className="py-2.5">
           {[...items, ...items].map((item, i) => (
@@ -453,7 +453,7 @@ function Stars({
   return (
     <div className={`flex items-center gap-1 ${align === "center" ? "justify-center" : "justify-start"}`} aria-label={`Avaliação ${rating} de 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className={i < rating ? `${starSize} fill-[#d9ad7f] text-[#d9ad7f]` : `${starSize} text-muted-foreground/30`} />
+        <Star key={i} className={i < rating ? `${starSize} fill-gold text-gold` : `${starSize} text-muted-foreground/30`} />
       ))}
     </div>
   );
