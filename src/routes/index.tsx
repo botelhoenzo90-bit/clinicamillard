@@ -22,7 +22,7 @@ import {
 import { Reveal } from "@/components/reveal";
 import { Marquee } from "@/components/marquee";
 import { WhatsAppButton, WhatsAppIcon } from "@/components/whatsapp-button";
-import logo from "@/assets/logo-millard.svg";
+import logoAsset from "@/assets/logo-millard-2026.jpeg.asset.json";
 import retrato from "@/assets/gabriela-retrato.jpg.asset.json";
 import {
   services,
@@ -45,6 +45,8 @@ const serviceImages: Record<string, string> = {
   "cuidados-personalizados": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2000&auto=format&fit=crop",
 };
 
+const logo = logoAsset.url;
+
 const title = "Millard | Estética e Laserterapia";
 const description =
   "Millard Estética e Laserterapia. Estética avançada sem dor nem agulhas, através de procedimentos inovadores baseados na nanotecnologia, em São Carlos, SP.";
@@ -60,9 +62,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: title },
       { property: "og:description", content: description },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logo },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logo },
     ],
     scripts: [
       {
@@ -163,7 +163,7 @@ function Hero() {
           alt="Millard Estética e Laserterapia"
           width={900}
           height={760}
-          className="h-auto w-[19rem] max-w-full object-contain sm:w-[28rem]"
+          className="h-auto w-[21rem] max-w-full object-contain sm:w-[32rem]"
         />
         <p className="eyebrow -mt-2">Estética avançada • Laserterapia</p>
         <h1 className="mt-4 max-w-3xl font-display text-[2.45rem] leading-[1.04] text-[#f4e6d9] sm:text-6xl">
