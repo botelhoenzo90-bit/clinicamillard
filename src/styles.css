@@ -212,6 +212,7 @@
 
 /* Millard palette: alternating warm beige and black keeps the page elegant and lighter. */
 main > section:nth-child(2),
+main > section:nth-child(3),
 main > section:nth-child(4),
 main > section:nth-child(6),
 main > section:nth-child(8),
