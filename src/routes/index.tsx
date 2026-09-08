@@ -232,7 +232,7 @@ function Trust() {
 
 function HowItWorks() {
   return (
-    <section id="como-funciona" className="bg-[#11100f] py-14 sm:py-16">
+    <section id="como-funciona" className="bg-background py-14 sm:py-16">
       <div className="mx-auto max-w-6xl px-5">
         <SectionTitle
           eyebrow="Como funciona"
