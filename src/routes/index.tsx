@@ -227,6 +227,9 @@ function Trust() {
           </Reveal>
         ))}
       </div>
+      <div className="flex justify-center px-5 pb-4 sm:pb-6">
+        <WhatsAppButton>Agendar avaliação</WhatsAppButton>
+      </div>
     </section>
   );
 }
