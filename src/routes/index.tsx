@@ -156,14 +156,13 @@ function SectionTitle({
 function Hero() {
   return (
     <section id="topo" className="relative overflow-hidden bg-[#080808]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(218,178,142,0.12),transparent_38%)]" />
-      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-4 text-center sm:pb-24">
+      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-6 text-center sm:pb-24">
         <img
           src={logo}
           alt="Millard Estética e Laserterapia"
           width={900}
           height={760}
-          className="h-auto w-[21rem] max-w-full object-contain sm:w-[32rem]"
+          className="h-auto w-[11rem] max-w-[70vw] object-contain sm:w-[15rem]"
         />
         <p className="eyebrow -mt-2">Estética avançada • Laserterapia</p>
         <h1 className="mt-4 max-w-3xl font-display text-[2.45rem] leading-[1.04] text-[#f4e6d9] sm:text-6xl">
@@ -205,8 +204,8 @@ function Trust() {
     { icon: ScanLine, short: "Procedimentos Inovadores" },
   ];
   return (
-    <section id="faixa-confianca" className="border-y border-gold bg-gold">
-      <div className="bg-gold sm:hidden">
+    <section id="faixa-confianca" className="border-y border-gold/30 bg-[#faf6f1]">
+      <div className="bg-[#faf6f1] sm:hidden">
         <Marquee speed={18} className="py-2.5">
           {[...items, ...items].map((item, i) => (
             <span
