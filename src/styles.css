@@ -267,12 +267,10 @@ main > section:nth-child(10) .card-lux {
   border-color: color-mix(in oklab, var(--gold) 35%, transparent);
 }
 
-/* Hero spacing: move the descriptor farther away from the logo. */
 #topo > div > p.eyebrow {
   margin-top: 1.25rem !important;
 }
 
-/* Bronze marquee between the black hero and the next section. */
 main > section#faixa-confianca > div:first-child {
   display: block !important;
   max-width: 100%;
@@ -298,7 +296,6 @@ main > section#faixa-confianca > div:nth-child(2) {
   display: none !important;
 }
 
-/* Smaller brand marks for a more refined visual hierarchy. */
 #topo img[alt*="Millard"] {
   width: 11rem;
   max-width: 70vw;
@@ -310,6 +307,7 @@ main > section#faixa-confianca > div:nth-child(2) {
 #duvidas img[alt="Logomarca Millard"] {
   width: 8rem;
   height: 6.5rem;
+  display: none !important;
 }
 
 footer img[alt*="Millard"] {
@@ -322,14 +320,12 @@ main > section:nth-child(9) img[alt=""] {
   object-fit: contain;
 }
 
-/* Review stars in a warm luxury yellow. */
 .lucide-star {
   color: #f4c542 !important;
   fill: #f4c542 !important;
   stroke: #f4c542 !important;
 }
 
-/* Replace the temporary portrait with a clean placeholder until Sandra's real photo is supplied. */
 #sobre img[alt*="Sandra Millard"] {
   display: none;
 }
