@@ -204,8 +204,8 @@ function Trust() {
     { icon: ScanLine, short: "Procedimentos Inovadores" },
   ];
   return (
-    <section id="faixa-confianca" className="border-y border-gold bg-gold">
-      <div className="bg-gold sm:hidden">
+    <section id="faixa-confianca" className="border-y border-gold/30 bg-[#faf6f1]">
+      <div className="bg-[#faf6f1] sm:hidden">
         <Marquee speed={18} className="py-2.5">
           {[...items, ...items].map((item, i) => (
             <span
