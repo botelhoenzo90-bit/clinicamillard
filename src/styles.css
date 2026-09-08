@@ -209,3 +209,105 @@
     pointer-events: none;
   }
 }
+
+/* Millard palette: alternate black and warm beige sections without changing the layout. */
+main > section:nth-child(2),
+main > section:nth-child(4),
+main > section:nth-child(6),
+main > section:nth-child(8),
+main > section:nth-child(10) {
+  --background: #e9ddd1;
+  --foreground: #2a211c;
+  --card: #f4ece5;
+  --card-foreground: #2a211c;
+  --popover: #f4ece5;
+  --popover-foreground: #2a211c;
+  --primary: #2a211c;
+  --primary-foreground: #f8f1eb;
+  --secondary: #dfd0c2;
+  --secondary-foreground: #40342c;
+  --muted: #e2d4c8;
+  --muted-foreground: #6e5d51;
+  --accent: #ddcbbd;
+  --accent-foreground: #2a211c;
+  --border: #cdb8a7;
+  --input: #cdb8a7;
+  --gold: #9c704d;
+  --gold-soft: #d4bba7;
+  --gold-deep: #805a3e;
+  --sand: #e9ddd1;
+  --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%);
+  --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%);
+  --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%);
+  background-color: #e9ddd1 !important;
+}
+
+main > section:nth-child(1),
+main > section:nth-child(3),
+main > section:nth-child(5),
+main > section:nth-child(7),
+main > section:nth-child(9),
+footer {
+  background-color: #080808;
+}
+
+/* Keep cards elegant on the light sections. */
+main > section:nth-child(2) .card-lux,
+main > section:nth-child(4) .card-lux,
+main > section:nth-child(6) .card-lux,
+main > section:nth-child(8) .card-lux,
+main > section:nth-child(10) .card-lux {
+  background-color: #f5eee8;
+  border-color: color-mix(in oklab, var(--gold) 35%, transparent);
+}
+
+/* The supplied logo has a black raster background; screen blending makes that black disappear into the site background while preserving the gold mark. */
+img[alt*="Millard"],
+img[alt="Logomarca Millard"] {
+  mix-blend-mode: screen;
+}
+
+/* Smaller, more balanced brand marks. */
+#topo img[alt*="Millard"] {
+  width: 17rem;
+  max-width: 82vw;
+}
+@media (min-width: 640px) {
+  #topo img[alt*="Millard"] { width: 23rem; }
+}
+
+main > section:nth-child(9) img[alt=""] {
+  mix-blend-mode: screen;
+  object-fit: contain;
+}
+
+/* Replace the temporary portrait with a clean placeholder until Sandra's real photo is supplied. */
+#sobre img[alt*="Sandra Millard"] {
+  display: none;
+}
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\] {
+  min-height: 19rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1.5rem;
+  background: linear-gradient(145deg, #14110f, #211b17);
+  overflow: hidden;
+}
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::after {
+  content: "Foto de Sandra Millard";
+  position: relative;
+  z-index: 2;
+  color: #e2bd98;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  letter-spacing: 0.04em;
+  text-align: center;
+}
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::before {
+  content: "";
+  position: absolute;
+  inset: 0.6rem;
+  border: 1px solid color-mix(in oklab, #d9b28e 50%, transparent);
+  border-radius: 1.1rem;
+}
