@@ -1,5 +1,5 @@
 export const WHATSAPP_URL =
-  "https://wa.me/5527981046436?text=Ol%C3%A1%20Sandra!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.";
+  "https://wa.me/5516997883654?text=Ol%C3%A1%20Sandra!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o.";
 
 export const INSTAGRAM_URL = "https://www.instagram.com/estetica_millard";
 

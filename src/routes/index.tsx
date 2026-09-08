@@ -22,7 +22,7 @@ import {
 import { Reveal } from "@/components/reveal";
 import { Marquee } from "@/components/marquee";
 import { WhatsAppButton, WhatsAppIcon } from "@/components/whatsapp-button";
-import logoAsset from "@/assets/logo-millard-2026.jpeg.asset.json";
+import logoAsset from "@/assets/logo-millard-bronze.png.asset.json";
 import retrato from "@/assets/gabriela-retrato.jpg.asset.json";
 import {
   services,
@@ -226,9 +226,6 @@ function Trust() {
             <p className="text-sm font-medium text-primary">{item.short}</p>
           </Reveal>
         ))}
-      </div>
-      <div className="flex justify-center px-5 pb-4 sm:pb-6">
-        <WhatsAppButton>Agendar avaliação</WhatsAppButton>
       </div>
     </section>
   );
