@@ -62,20 +62,20 @@
   --destructive-foreground: #fff7f0;
   --border: #332a24;
   --input: #332a24;
-  --ring: #d9ad7f;
-  --gold: #d9b28e;
-  --gold-soft: #3a2d24;
-  --gold-deep: #e2bd98;
+  --ring: #d4af37;
+  --gold: #d4af37;
+  --gold-soft: #443814;
+  --gold-deep: #f0cf62;
   --sand: #11100f;
   --whatsapp: #20b85a;
   --whatsapp-dark: #159447;
   --whatsapp-foreground: #ffffff;
-  --gradient-gold: linear-gradient(120deg, #a97950 0%, #f0d1b1 38%, #c99b70 62%, #f4ddc5 100%);
+  --gradient-gold: linear-gradient(120deg, #a47f12 0%, #f5dc79 38%, #c69c22 62%, #ffeb9a 100%);
   --gradient-veil: linear-gradient(160deg, #0a0a0a 0%, #151311 55%, #0d0d0d 100%);
   --shadow-silk: 0 1px 2px rgb(0 0 0 / 35%), 0 30px 60px -35px rgb(0 0 0 / 80%);
   --shadow-lift: 0 40px 80px -45px rgb(0 0 0 / 95%);
   --shadow-whatsapp: 0 14px 30px -14px rgb(32 184 90 / 55%);
-  --gradient-brand: linear-gradient(100deg, #080808 0%, #18120e 52%, #b88a61 100%);
+  --gradient-brand: linear-gradient(100deg, #080808 0%, #19170d 52%, #c69c22 100%);
   --marble-url: none;
 }
 
@@ -216,30 +216,30 @@ main > section:nth-child(4),
 main > section:nth-child(6),
 main > section:nth-child(8),
 main > section:nth-child(10) {
-  --background: #e9ddd1;
+  --background: #f5eee8;
   --foreground: #2a211c;
-  --card: #f4ece5;
+  --card: #fffaf5;
   --card-foreground: #2a211c;
-  --popover: #f4ece5;
+  --popover: #fffaf5;
   --popover-foreground: #2a211c;
   --primary: #2a211c;
   --primary-foreground: #f8f1eb;
-  --secondary: #dfd0c2;
+  --secondary: #eadfd6;
   --secondary-foreground: #40342c;
-  --muted: #e2d4c8;
+  --muted: #eee4dc;
   --muted-foreground: #6e5d51;
-  --accent: #ddcbbd;
+  --accent: #eadccf;
   --accent-foreground: #2a211c;
-  --border: #cdb8a7;
-  --input: #cdb8a7;
-  --gold: #9c704d;
-  --gold-soft: #d4bba7;
-  --gold-deep: #805a3e;
-  --sand: #e9ddd1;
-  --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%);
+  --border: #d9cabe;
+  --input: #d9cabe;
+  --gold: #b58b12;
+  --gold-soft: #ead998;
+  --gold-deep: #806000;
+  --sand: #f5eee8;
+  --gradient-gold: linear-gradient(120deg, #94700b 0%, #dfbd45 40%, #a77e0d 66%, #f1d876 100%);
   --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%);
   --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%);
-  background-color: #e9ddd1 !important;
+  background-color: #f5eee8 !important;
 }
 
 main > section:nth-child(1),
@@ -258,12 +258,6 @@ main > section:nth-child(8) .card-lux,
 main > section:nth-child(10) .card-lux {
   background-color: #f5eee8;
   border-color: color-mix(in oklab, var(--gold) 35%, transparent);
-}
-
-/* The supplied logo is a dark raster image. Screen blending removes its dark rectangle and leaves the gold mark cleanly on the site's black. */
-img[alt*="Millard"],
-img[alt="Logomarca Millard"] {
-  mix-blend-mode: screen;
 }
 
 /* Smaller brand marks for a more refined visual hierarchy. */
@@ -317,6 +311,6 @@ main > section:nth-child(9) img[alt=""] {
   content: "";
   position: absolute;
   inset: 0.6rem;
-  border: 1px solid color-mix(in oklab, #d9b28e 50%, transparent);
+  border: 1px solid color-mix(in oklab, var(--gold) 50%, transparent);
   border-radius: 1.1rem;
 }
