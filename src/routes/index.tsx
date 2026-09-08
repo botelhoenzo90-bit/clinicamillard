@@ -205,15 +205,15 @@ function Trust() {
     { icon: ScanLine, short: "Procedimentos Inovadores" },
   ];
   return (
-    <section className="border-y border-gold/25 bg-[#0c0c0c]">
-      <div className="bg-primary sm:hidden">
+    <section id="faixa-confianca" className="border-y border-gold bg-gold">
+      <div className="bg-gold sm:hidden">
         <Marquee speed={18} className="py-2.5">
           {[...items, ...items].map((item, i) => (
             <span
               key={i}
-              className="flex items-center gap-2 px-3 text-[0.7rem] uppercase tracking-[0.2em] text-primary-foreground"
+              className="flex items-center gap-2 px-3 text-[0.7rem] font-medium uppercase tracking-[0.2em] text-primary"
             >
-              <item.icon className="h-3.5 w-3.5 shrink-0 text-gold" />
+              <item.icon className="h-3.5 w-3.5 shrink-0 text-primary" />
               {item.short}
             </span>
           ))}
@@ -222,10 +222,13 @@ function Trust() {
       <div className="mx-auto hidden max-w-6xl items-center gap-5 px-5 py-7 text-center sm:grid sm:grid-cols-3">
         {items.map((item, i) => (
           <Reveal key={item.short} delay={i * 80} className="flex items-center justify-center gap-2.5">
-            <item.icon className="h-4 w-4 shrink-0 text-gold" />
-            <p className="text-sm text-muted-foreground">{item.short}</p>
+            <item.icon className="h-4 w-4 shrink-0 text-primary" />
+            <p className="text-sm font-medium text-primary">{item.short}</p>
           </Reveal>
         ))}
+      </div>
+      <div className="flex justify-center px-5 pb-4 sm:pb-6">
+        <WhatsAppButton>Agendar avaliação</WhatsAppButton>
       </div>
     </section>
   );
@@ -338,6 +341,9 @@ function BeforeAfter() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={180} className="mt-7 flex justify-center">
+          <WhatsAppButton size="lg">Agendar avaliação</WhatsAppButton>
+        </Reveal>
       </div>
     </section>
   );
@@ -364,6 +370,9 @@ function Benefits() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={180} className="mt-7 flex justify-center">
+          <WhatsAppButton size="lg">Agendar avaliação</WhatsAppButton>
+        </Reveal>
       </div>
     </section>
   );
@@ -447,7 +456,7 @@ function Stars({
   return (
     <div className={`flex items-center gap-1 ${align === "center" ? "justify-center" : "justify-start"}`} aria-label={`Avaliação ${rating} de 5`}>
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star key={i} className={i < rating ? `${starSize} fill-[#d9ad7f] text-[#d9ad7f]` : `${starSize} text-muted-foreground/30`} />
+        <Star key={i} className={i < rating ? `${starSize} fill-gold text-gold` : `${starSize} text-muted-foreground/30`} />
       ))}
     </div>
   );
