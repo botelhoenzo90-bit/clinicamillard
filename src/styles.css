@@ -210,7 +210,7 @@
   }
 }
 
-/* Millard palette: alternate black and warm beige sections without changing the layout. */
+/* Millard palette: alternating warm beige and black keeps the page elegant and lighter. */
 main > section:nth-child(2),
 main > section:nth-child(4),
 main > section:nth-child(6),
@@ -251,7 +251,6 @@ footer {
   background-color: #080808;
 }
 
-/* Keep cards elegant on the light sections. */
 main > section:nth-child(2) .card-lux,
 main > section:nth-child(4) .card-lux,
 main > section:nth-child(6) .card-lux,
@@ -261,19 +260,29 @@ main > section:nth-child(10) .card-lux {
   border-color: color-mix(in oklab, var(--gold) 35%, transparent);
 }
 
-/* The supplied logo has a black raster background; screen blending makes that black disappear into the site background while preserving the gold mark. */
+/* The supplied logo is a dark raster image. Screen blending removes its dark rectangle and leaves the gold mark cleanly on the site's black. */
 img[alt*="Millard"],
 img[alt="Logomarca Millard"] {
   mix-blend-mode: screen;
 }
 
-/* Smaller, more balanced brand marks. */
+/* Smaller brand marks for a more refined visual hierarchy. */
 #topo img[alt*="Millard"] {
   width: 17rem;
   max-width: 82vw;
 }
 @media (min-width: 640px) {
   #topo img[alt*="Millard"] { width: 23rem; }
+}
+
+#duvidas img[alt="Logomarca Millard"] {
+  width: 8rem;
+  height: 6.5rem;
+}
+
+footer img[alt*="Millard"] {
+  width: 9rem;
+  height: 7.5rem;
 }
 
 main > section:nth-child(9) img[alt=""] {
