@@ -253,8 +253,8 @@ footer {
 
 main > section#faixa-confianca {
   background-color: #faf6f1 !important;
-  padding-top: 0.65rem;
-  padding-bottom: 0.65rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 main > section:nth-child(2) .card-lux,
