@@ -266,11 +266,11 @@ main > section:nth-child(10) .card-lux {
 
 /* Smaller brand marks for a more refined visual hierarchy. */
 #topo img[alt*="Millard"] {
-  width: 17rem;
-  max-width: 82vw;
+  width: 11rem;
+  max-width: 70vw;
 }
 @media (min-width: 640px) {
-  #topo img[alt*="Millard"] { width: 23rem; }
+  #topo img[alt*="Millard"] { width: 15rem; }
 }
 
 #duvidas img[alt="Logomarca Millard"] {
