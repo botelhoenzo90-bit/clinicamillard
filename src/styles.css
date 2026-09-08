@@ -212,6 +212,7 @@
 
 /* Millard palette: alternating warm beige and black keeps the page elegant and lighter. */
 main > section:nth-child(2),
+main > section:nth-child(3),
 main > section:nth-child(4),
 main > section:nth-child(6),
 main > section:nth-child(8),
@@ -243,7 +244,6 @@ main > section:nth-child(10) {
 }
 
 main > section:nth-child(1),
-main > section:nth-child(3),
 main > section:nth-child(5),
 main > section:nth-child(7),
 main > section:nth-child(9),
@@ -253,11 +253,12 @@ footer {
 
 main > section#faixa-confianca {
   background-color: #faf6f1 !important;
-  padding-top: 0.65rem;
-  padding-bottom: 0.65rem;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 main > section:nth-child(2) .card-lux,
+main > section:nth-child(3) .card-lux,
 main > section:nth-child(4) .card-lux,
 main > section:nth-child(6) .card-lux,
 main > section:nth-child(8) .card-lux,
