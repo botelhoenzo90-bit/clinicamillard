@@ -1,0 +1,321 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gold: var(--gold);
+  --color-gold-soft: var(--gold-soft);
+  --color-gold-deep: var(--gold-deep);
+  --color-sand: var(--sand);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-dark: var(--whatsapp-dark);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-script: "Parisienne", cursive;
+  --font-sans: "Jost", system-ui, sans-serif;
+}
+
+:root {
+  --radius: 0.5rem;
+  --background: oklch(0.985 0.008 85);
+  --foreground: oklch(0.25 0.02 160);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.25 0.02 160);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.25 0.02 160);
+  --primary: oklch(0.35 0.08 160);
+  --primary-foreground: oklch(0.98 0.01 160);
+  --secondary: oklch(0.96 0.015 85);
+  --secondary-foreground: oklch(0.35 0.08 160);
+  --muted: oklch(0.95 0.01 85);
+  --muted-foreground: oklch(0.45 0.03 160);
+  --accent: oklch(0.92 0.04 85);
+  --accent-foreground: oklch(0.3 0.05 160);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.99 0.005 90);
+  --border: oklch(0.88 0.02 85);
+  --input: oklch(0.88 0.02 85);
+  --ring: oklch(0.35 0.08 160);
+
+  --gold: oklch(0.75 0.09 80);
+  --gold-soft: oklch(0.88 0.055 85);
+  --gold-deep: oklch(0.58 0.075 68);
+  --sand: oklch(0.965 0.018 82);
+  --whatsapp: oklch(0.65 0.155 152);
+  --whatsapp-dark: oklch(0.57 0.145 152);
+  --whatsapp-foreground: oklch(0.99 0.005 150);
+
+
+  --gradient-gold: linear-gradient(
+    120deg,
+    oklch(0.62 0.07 66) 0%,
+    oklch(0.84 0.09 85) 38%,
+    oklch(0.72 0.09 78) 62%,
+    oklch(0.9 0.06 90) 100%
+  );
+  --gradient-veil: linear-gradient(
+    160deg,
+    oklch(0.995 0.004 90) 0%,
+    oklch(0.975 0.016 84) 55%,
+    oklch(0.955 0.03 82) 100%
+  );
+  --shadow-silk: 0 1px 2px oklch(0.5 0.03 70 / 6%), 0 30px 60px -35px oklch(0.5 0.05 70 / 40%);
+  --shadow-lift: 0 40px 80px -45px oklch(0.45 0.06 68 / 55%);
+  --shadow-whatsapp: 0 14px 30px -14px oklch(0.6 0.15 152 / 65%);
+
+  --gradient-brand: linear-gradient(100deg, oklch(0.35 0.08 160) 0%, oklch(0.45 0.06 160) 45%, oklch(0.58 0.075 68) 100%);
+  --marble-url: url("/__l5e/assets-v1/eb1f1e3e-1666-4824-9eee-f18a6af89275/marmore.jpg");
+}
+
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    font-weight: 300;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility font-display {
+  font-family: var(--font-display);
+}
+
+@utility font-script {
+  font-family: var(--font-script);
+}
+
+@utility text-gold-gradient {
+  background-image: var(--gradient-gold);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+@utility bg-gold-gradient {
+  background-image: var(--gradient-gold);
+}
+
+@utility bg-veil {
+  background-image: var(--gradient-veil);
+}
+
+@utility shadow-silk {
+  box-shadow: var(--shadow-silk);
+}
+
+@utility shadow-lift {
+  box-shadow: var(--shadow-lift);
+}
+
+@utility shadow-whatsapp {
+  box-shadow: var(--shadow-whatsapp);
+}
+
+
+@utility rule-gold {
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    var(--gold),
+    transparent
+  );
+}
+
+@utility eyebrow {
+  font-size: 0.72rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--gold-deep);
+}
+
+@utility reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: reveal-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes reveal-up {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 7s ease-in-out infinite;
+}
+
+@keyframes marquee-x {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.marquee-track {
+  animation-name: marquee-x;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.group:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+
+@utility card-lux {
+  position: relative;
+  border-radius: 1.25rem;
+  border: 1px solid color-mix(in oklab, var(--gold) 28%, transparent);
+  background-color: var(--card);
+  box-shadow: var(--shadow-silk);
+  transition:
+    transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.5s ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in oklab, var(--gold) 62%, transparent);
+    box-shadow: var(--shadow-lift);
+  }
+}
+
+@utility gold-cap {
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0 auto auto 0;
+    height: 2px;
+    width: 100%;
+    border-radius: 999px;
+    background-image: var(--gradient-gold);
+    opacity: 0.55;
+  }
+}
+
+
+@utility bg-marble {
+  background-image: linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--background) 82%, transparent),
+      color-mix(in oklab, var(--background) 70%, transparent)
+    ),
+    var(--marble-url);
+  background-size: cover;
+  background-position: center;
+}
+
+@utility bg-marble-soft {
+  background-color: var(--sand);
+}
+
+@utility bg-brand-band {
+  background-image: var(--gradient-brand);
+}
+
+@utility divider-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+
+  &::before,
+  &::after {
+    content: "";
+    height: 1px;
+    width: 3.5rem;
+    background-image: linear-gradient(to right, transparent, var(--gold));
+  }
+
+  &::after {
+    background-image: linear-gradient(to left, transparent, var(--gold));
+  }
+}
+
+#lovable-badge {
+  display: none !important;
+}
+
+
+
+
+@utility gold-frame {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0.55rem;
+    border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent);
+    border-radius: inherit;
+    pointer-events: none;
+  }
+}
