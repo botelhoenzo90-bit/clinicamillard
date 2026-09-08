@@ -252,7 +252,7 @@ footer {
 }
 
 main > section#faixa-confianca {
-  background-color: var(--gold) !important;
+  background-color: #faf6f1 !important;
 }
 
 main > section:nth-child(2) .card-lux,
