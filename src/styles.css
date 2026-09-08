@@ -253,6 +253,8 @@ footer {
 
 main > section#faixa-confianca {
   background-color: #faf6f1 !important;
+  padding-top: 0.65rem;
+  padding-bottom: 0.65rem;
 }
 
 main > section:nth-child(2) .card-lux,
@@ -262,6 +264,37 @@ main > section:nth-child(8) .card-lux,
 main > section:nth-child(10) .card-lux {
   background-color: #faf6f1;
   border-color: color-mix(in oklab, var(--gold) 35%, transparent);
+}
+
+/* Hero spacing: move the descriptor farther away from the logo. */
+#topo > div > p.eyebrow {
+  margin-top: 1.25rem !important;
+}
+
+/* Bronze marquee between the black hero and the next section. */
+main > section#faixa-confianca > div:first-child {
+  display: block !important;
+  max-width: 100%;
+  overflow: hidden;
+  background: linear-gradient(100deg, #5a3826 0%, #8d5d3e 45%, #68432f 100%) !important;
+  border-top: 1px solid rgb(226 189 152 / 42%);
+  border-bottom: 1px solid rgb(226 189 152 / 42%);
+}
+
+main > section#faixa-confianca > div:first-child .marquee-track {
+  animation-duration: 18s !important;
+}
+
+main > section#faixa-confianca > div:first-child span {
+  color: #f4dfc9 !important;
+}
+
+main > section#faixa-confianca > div:first-child svg {
+  color: #e7c39f !important;
+}
+
+main > section#faixa-confianca > div:nth-child(2) {
+  display: none !important;
 }
 
 /* Smaller brand marks for a more refined visual hierarchy. */
@@ -286,6 +319,13 @@ footer img[alt*="Millard"] {
 main > section:nth-child(9) img[alt=""] {
   mix-blend-mode: screen;
   object-fit: contain;
+}
+
+/* Review stars in a warm luxury yellow. */
+.lucide-star {
+  color: #f4c542 !important;
+  fill: #f4c542 !important;
+  stroke: #f4c542 !important;
 }
 
 /* Replace the temporary portrait with a clean placeholder until Sandra's real photo is supplied. */
