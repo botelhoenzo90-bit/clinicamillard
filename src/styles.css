@@ -216,30 +216,30 @@ main > section:nth-child(4),
 main > section:nth-child(6),
 main > section:nth-child(8),
 main > section:nth-child(10) {
-  --background: #f5eee8;
+  --background: #faf6f1;
   --foreground: #2a211c;
-  --card: #fffaf5;
+  --card: #fffdf9;
   --card-foreground: #2a211c;
-  --popover: #fffaf5;
+  --popover: #fffdf9;
   --popover-foreground: #2a211c;
   --primary: #2a211c;
   --primary-foreground: #f8f1eb;
-  --secondary: #eadfd6;
+  --secondary: #f0e8df;
   --secondary-foreground: #40342c;
-  --muted: #eee4dc;
+  --muted: #f3ebe1;
   --muted-foreground: #6e5d51;
-  --accent: #eadccf;
+  --accent: #f0e2d5;
   --accent-foreground: #2a211c;
-  --border: #d9cabe;
-  --input: #d9cabe;
+  --border: #e2d6c8;
+  --input: #e2d6c8;
   --gold: #9c704d;
   --gold-soft: #d4bba7;
   --gold-deep: #805a3e;
-  --sand: #f5eee8;
+  --sand: #faf6f1;
   --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%);
   --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%);
   --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%);
-  background-color: #f5eee8 !important;
+  background-color: #faf6f1 !important;
 }
 
 main > section:nth-child(1),
