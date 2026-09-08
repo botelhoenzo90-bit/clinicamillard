@@ -156,14 +156,13 @@ function SectionTitle({
 function Hero() {
   return (
     <section id="topo" className="relative overflow-hidden bg-[#080808]">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(218,178,142,0.12),transparent_38%)]" />
-      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-4 text-center sm:pb-24">
+      <div className="relative mx-auto flex max-w-4xl flex-col items-center px-5 pb-16 pt-6 text-center sm:pb-24">
         <img
           src={logo}
           alt="Millard Estética e Laserterapia"
           width={900}
           height={760}
-          className="h-auto w-[21rem] max-w-full object-contain sm:w-[32rem]"
+          className="h-auto w-[11rem] max-w-[70vw] object-contain sm:w-[15rem]"
         />
         <p className="eyebrow -mt-2">Estética avançada • Laserterapia</p>
         <h1 className="mt-4 max-w-3xl font-display text-[2.45rem] leading-[1.04] text-[#f4e6d9] sm:text-6xl">
