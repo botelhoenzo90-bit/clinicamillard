@@ -83,9 +83,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Estética avançada e personalizada com Chris Vitorino. Protocolos exclusivos de estética regenerativa, harmonização e tricologia capilar.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "/favicon.png" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: "/favicon.png" },
     ],
     links: [
       {
