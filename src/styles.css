@@ -130,11 +130,6 @@ main > section#faixa-confianca > div:nth-child(2) { display: none !important; }
 footer img[alt*="Millard"] { width: 9rem; height: 7.5rem; }
 main > section:nth-child(9) img[alt=""] { mix-blend-mode: screen; object-fit: contain; }
 .lucide-star { color: #f4c542 !important; fill: #f4c542 !important; stroke: #f4c542 !important; }
-#sobre img[alt*="Sandra Millard"] { display: none; }
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\] { min-height: 19rem; display: flex; align-items: center; justify-content: center; border-radius: 1.5rem; background: linear-gradient(145deg, #14110f, #211b17); overflow: hidden; }
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::after { content: "Foto de Sandra Millard"; position: relative; z-index: 2; color: #e2bd98; font-family: var(--font-display); font-size: 1.35rem; letter-spacing: 0.04em; text-align: center; }
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::before { content: ""; position: absolute; inset: 0.6rem; border: 1px solid color-mix(in oklab, var(--gold) 50%, transparent); border-radius: 1.1rem; }
-
 /* Refinamentos solicitados: laserterapia como especialidade, imagem acima dos cards e estética sempre clara. */
 #laserterapia { background-color: #faf6f1 !important; }
 #laserterapia > div > div:last-child { display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 2rem !important; }
@@ -163,14 +158,8 @@ main > section:nth-child(9) img[alt=""] { mix-blend-mode: screen; object-fit: co
 #servicos { background-color: #faf6f1 !important; color: #2a211c !important; }
 #servicos .card-lux { background-color: #fffdf9 !important; color: #2a211c; }
 #servicos .absolute { color: #f0d0ad; }
-
-/* Antes e depois: mantém o fundo geral escuro e reserva áreas bege para as fotos. */
-#antes-e-depois { background-color: #0b0b0b !important; }
-#antes-e-depois article > div { background: #eee5dc !important; }
-#antes-e-depois article > div .text-gold-deep,
-#antes-e-depois article > div p { color: #6e5d51 !important; }
-#antes-e-depois article > div svg { color: #9c704d !important; }
-#antes-e-depois article { background-color: #eee5dc !important; }
+#servicos h2 { background-image: none; color: #2a211c; }
+#servicos > div > div > p:last-child { color: #5e5047; }
 
 @media (min-width: 640px) {
   #laserterapia h2::after { font-size: 2.35rem; }
