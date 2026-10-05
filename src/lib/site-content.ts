@@ -11,12 +11,6 @@ export const services = [
     duration: "Sessão Personalizada",
   },
   {
-    slug: "laserterapia",
-    name: "Laserterapia",
-    text: "Procedimentos inovadores de laserterapia pensados para diferentes necessidades estéticas, sempre com avaliação individualizada.",
-    duration: "Avaliação Personalizada",
-  },
-  {
     slug: "estetica-facial",
     name: "Estética Facial",
     text: "Cuidados e procedimentos para melhorar a aparência da pele, preservar a naturalidade e valorizar os traços de cada pessoa.",
