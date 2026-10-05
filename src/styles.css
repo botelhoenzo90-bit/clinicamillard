@@ -113,11 +113,11 @@
 #lovable-badge { display: none !important; }
 @utility gold-frame { position: relative; &::after { content: ""; position: absolute; inset: 0.55rem; border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); border-radius: inherit; pointer-events: none; } }
 
-/* Millard palette: alternating warm beige and black keeps the page elegant and lighter. */
-main > section:nth-child(2), main > section:nth-child(3), main > section:nth-child(4), main > section:nth-child(6), main > section:nth-child(8), main > section:nth-child(10) { --background: #faf6f1; --foreground: #2a211c; --card: #fffdf9; --card-foreground: #2a211c; --popover: #fffdf9; --popover-foreground: #2a211c; --primary: #2a211c; --primary-foreground: #f8f1eb; --secondary: #f0e8df; --secondary-foreground: #40342c; --muted: #f3ebe1; --muted-foreground: #6e5d51; --accent: #f0e2d5; --accent-foreground: #2a211c; --border: #e2d6c8; --input: #e2d6c8; --gold: #9c704d; --gold-soft: #d4bba7; --gold-deep: #805a3e; --sand: #faf6f1; --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%); --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%); --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%); background-color: #faf6f1 !important; }
-main > section:nth-child(1), main > section:nth-child(5), main > section:nth-child(7), main > section:nth-child(9), footer { background-color: #080808; }
+/* Millard palette: explicit section themes keep the intended sequence stable. */
+#faixa-confianca, #como-funciona, #laserterapia, #servicos, #sobre, #localizacao, #duvidas { --background: #faf6f1; --foreground: #2a211c; --card: #fffdf9; --card-foreground: #2a211c; --popover: #fffdf9; --popover-foreground: #2a211c; --primary: #2a211c; --primary-foreground: #f8f1eb; --secondary: #f0e8df; --secondary-foreground: #40342c; --muted: #f3ebe1; --muted-foreground: #6e5d51; --accent: #f0e2d5; --accent-foreground: #2a211c; --border: #e2d6c8; --input: #e2d6c8; --gold: #9c704d; --gold-soft: #d4bba7; --gold-deep: #805a3e; --sand: #faf6f1; --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%); --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%); --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%); background-color: #faf6f1 !important; }
+#topo, #diferenciais, #depoimentos, footer { background-color: #080808 !important; }
 main > section#faixa-confianca { background-color: #faf6f1 !important; padding-top: 0; padding-bottom: 0; }
-main > section:nth-child(2) .card-lux, main > section:nth-child(3) .card-lux, main > section:nth-child(4) .card-lux, main > section:nth-child(6) .card-lux, main > section:nth-child(8) .card-lux, main > section:nth-child(10) .card-lux { background-color: #faf6f1; border-color: color-mix(in oklab, var(--gold) 35%, transparent); }
+#como-funciona .card-lux, #servicos .card-lux, #sobre .card-lux, #localizacao .card-lux { background-color: #fffdf9; border-color: color-mix(in oklab, var(--gold) 35%, transparent); }
 #topo > div > p.eyebrow { margin-top: 1.25rem !important; }
 main > section#faixa-confianca > div:first-child { display: block !important; max-width: 100%; overflow: hidden; background: linear-gradient(100deg, #5a3826 0%, #8d5d3e 45%, #68432f 100%) !important; border-top: 1px solid rgb(226 189 152 / 42%); border-bottom: 1px solid rgb(226 189 152 / 42%); }
 main > section#faixa-confianca > div:first-child .marquee-track { animation-duration: 18s !important; }
@@ -128,14 +128,14 @@ main > section#faixa-confianca > div:nth-child(2) { display: none !important; }
 @media (min-width: 640px) { #topo img[alt*="Millard"] { width: 15rem; } }
 #duvidas img[alt="Logomarca Millard"] { width: 8rem; height: 6.5rem; display: none !important; }
 footer img[alt*="Millard"] { width: 9rem; height: 7.5rem; }
-main > section:nth-child(9) img[alt=""] { mix-blend-mode: screen; object-fit: contain; }
+#localizacao img[alt=""] { object-fit: contain; }
 .lucide-star { color: #f4c542 !important; fill: #f4c542 !important; stroke: #f4c542 !important; }
 /* Refinamentos solicitados: laserterapia como especialidade, imagem acima dos cards e estética sempre clara. */
 #laserterapia { background-color: #faf6f1 !important; }
 #laserterapia > div > div:last-child { display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 2rem !important; }
 #laserterapia > div > div:last-child > div:first-child { order: 1 !important; width: 100% !important; }
 #laserterapia > div > div:last-child > div:last-child { order: 2 !important; width: 100% !important; text-align: center !important; }
-#laserterapia > div > div:last-child > div:first-child > div { max-width: 48rem !important; margin-inline: auto !important; }
+#laserterapia > div > div:last-child > div:first-child > div { max-width: 28rem !important; margin-inline: auto !important; }
 #laserterapia > div > div:last-child > div:last-child > p:first-child { max-width: 52rem; margin-inline: auto; }
 #laserterapia .grid.sm\:grid-cols-2 { max-width: 58rem; margin-inline: auto; }
 #laserterapia .rounded-2xl { background: rgba(255,253,249,0.9) !important; }
