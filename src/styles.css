@@ -82,276 +82,97 @@
 @layer base {
   * { border-color: var(--color-border); }
   html { scroll-behavior: smooth; }
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: var(--font-sans);
-    font-weight: 300;
-    letter-spacing: 0.01em;
-  }
-  h1, h2, h3, h4 {
-    font-family: var(--font-display);
-    font-weight: 300;
-    letter-spacing: -0.01em;
-  }
+  body { background-color: var(--color-background); color: var(--color-foreground); font-family: var(--font-sans); font-weight: 300; letter-spacing: 0.01em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); font-weight: 300; letter-spacing: -0.01em; }
 }
 
 @utility font-display { font-family: var(--font-display); }
 @utility font-script { font-family: var(--font-script); }
-@utility text-gold-gradient {
-  background-image: var(--gradient-gold);
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-}
+@utility text-gold-gradient { background-image: var(--gradient-gold); background-clip: text; -webkit-background-clip: text; color: transparent; }
 @utility bg-gold-gradient { background-image: var(--gradient-gold); }
 @utility bg-veil { background-image: var(--gradient-veil); }
 @utility shadow-silk { box-shadow: var(--shadow-silk); }
 @utility shadow-lift { box-shadow: var(--shadow-lift); }
 @utility shadow-whatsapp { box-shadow: var(--shadow-whatsapp); }
-
-@utility rule-gold {
-  height: 1px;
-  background-image: linear-gradient(to right, transparent, var(--gold), transparent);
-}
-
-@utility eyebrow {
-  font-size: 0.72rem;
-  letter-spacing: 0.38em;
-  text-transform: uppercase;
-  color: var(--gold-deep);
-}
-
-@utility reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  animation: reveal-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
+@utility rule-gold { height: 1px; background-image: linear-gradient(to right, transparent, var(--gold), transparent); }
+@utility eyebrow { font-size: 0.72rem; letter-spacing: 0.38em; text-transform: uppercase; color: var(--gold-deep); }
+@utility reveal { opacity: 0; transform: translateY(24px); animation: reveal-up 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
 @keyframes reveal-up { to { opacity: 1; transform: translateY(0); } }
-@keyframes float-slow {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-14px); }
-}
+@keyframes float-slow { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-14px); } }
 @utility float-slow { animation: float-slow 7s ease-in-out infinite; }
-
-@keyframes marquee-x {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50%, 0, 0); }
-}
-.marquee-track {
-  animation-name: marquee-x;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: transform;
-}
+@keyframes marquee-x { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(-50%, 0, 0); } }
+.marquee-track { animation-name: marquee-x; animation-timing-function: linear; animation-iteration-count: infinite; will-change: transform; }
 .group:hover .marquee-track { animation-play-state: paused; }
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
-}
-
-@utility card-lux {
-  position: relative;
-  border-radius: 1.25rem;
-  border: 1px solid color-mix(in oklab, var(--gold) 28%, transparent);
-  background-color: var(--card);
-  box-shadow: var(--shadow-silk);
-  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease;
-  &:hover {
-    transform: translateY(-6px);
-    border-color: color-mix(in oklab, var(--gold) 62%, transparent);
-    box-shadow: var(--shadow-lift);
-  }
-}
-
-@utility gold-cap {
-  &::before {
-    content: "";
-    position: absolute;
-    inset: 0 auto auto 0;
-    height: 2px;
-    width: 100%;
-    border-radius: 999px;
-    background-image: var(--gradient-gold);
-    opacity: 0.55;
-  }
-}
-
+@media (prefers-reduced-motion: reduce) { .marquee-track { animation: none; } }
+@utility card-lux { position: relative; border-radius: 1.25rem; border: 1px solid color-mix(in oklab, var(--gold) 28%, transparent); background-color: var(--card); box-shadow: var(--shadow-silk); transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease; &:hover { transform: translateY(-6px); border-color: color-mix(in oklab, var(--gold) 62%, transparent); box-shadow: var(--shadow-lift); } }
+@utility gold-cap { &::before { content: ""; position: absolute; inset: 0 auto auto 0; height: 2px; width: 100%; border-radius: 999px; background-image: var(--gradient-gold); opacity: 0.55; } }
 @utility bg-marble { background-color: var(--sand); }
 @utility bg-marble-soft { background-color: var(--sand); }
 @utility bg-brand-band { background-image: var(--gradient-brand); }
-
-@utility divider-ornament {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.75rem;
-  &::before, &::after {
-    content: "";
-    height: 1px;
-    width: 3.5rem;
-    background-image: linear-gradient(to right, transparent, var(--gold));
-  }
-  &::after { background-image: linear-gradient(to left, transparent, var(--gold)); }
-}
-
+@utility divider-ornament { display: flex; align-items: center; justify-content: center; gap: 0.75rem; &::before, &::after { content: ""; height: 1px; width: 3.5rem; background-image: linear-gradient(to right, transparent, var(--gold)); } &::after { background-image: linear-gradient(to left, transparent, var(--gold)); } }
 #lovable-badge { display: none !important; }
-
-@utility gold-frame {
-  position: relative;
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0.55rem;
-    border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent);
-    border-radius: inherit;
-    pointer-events: none;
-  }
-}
+@utility gold-frame { position: relative; &::after { content: ""; position: absolute; inset: 0.55rem; border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); border-radius: inherit; pointer-events: none; } }
 
 /* Millard palette: alternating warm beige and black keeps the page elegant and lighter. */
-main > section:nth-child(2),
-main > section:nth-child(3),
-main > section:nth-child(4),
-main > section:nth-child(6),
-main > section:nth-child(8),
-main > section:nth-child(10) {
-  --background: #faf6f1;
-  --foreground: #2a211c;
-  --card: #fffdf9;
-  --card-foreground: #2a211c;
-  --popover: #fffdf9;
-  --popover-foreground: #2a211c;
-  --primary: #2a211c;
-  --primary-foreground: #f8f1eb;
-  --secondary: #f0e8df;
-  --secondary-foreground: #40342c;
-  --muted: #f3ebe1;
-  --muted-foreground: #6e5d51;
-  --accent: #f0e2d5;
-  --accent-foreground: #2a211c;
-  --border: #e2d6c8;
-  --input: #e2d6c8;
-  --gold: #9c704d;
-  --gold-soft: #d4bba7;
-  --gold-deep: #805a3e;
-  --sand: #faf6f1;
-  --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%);
-  --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%);
-  --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%);
-  background-color: #faf6f1 !important;
-}
+main > section:nth-child(2), main > section:nth-child(3), main > section:nth-child(4), main > section:nth-child(6), main > section:nth-child(8), main > section:nth-child(10) { --background: #faf6f1; --foreground: #2a211c; --card: #fffdf9; --card-foreground: #2a211c; --popover: #fffdf9; --popover-foreground: #2a211c; --primary: #2a211c; --primary-foreground: #f8f1eb; --secondary: #f0e8df; --secondary-foreground: #40342c; --muted: #f3ebe1; --muted-foreground: #6e5d51; --accent: #f0e2d5; --accent-foreground: #2a211c; --border: #e2d6c8; --input: #e2d6c8; --gold: #9c704d; --gold-soft: #d4bba7; --gold-deep: #805a3e; --sand: #faf6f1; --gradient-gold: linear-gradient(120deg, #805a3e 0%, #c49a78 40%, #8e6548 66%, #d6b497 100%); --shadow-silk: 0 1px 2px rgb(63 45 32 / 12%), 0 24px 50px -35px rgb(63 45 32 / 30%); --shadow-lift: 0 30px 65px -42px rgb(63 45 32 / 42%); background-color: #faf6f1 !important; }
+main > section:nth-child(1), main > section:nth-child(5), main > section:nth-child(7), main > section:nth-child(9), footer { background-color: #080808; }
+main > section#faixa-confianca { background-color: #faf6f1 !important; padding-top: 0; padding-bottom: 0; }
+main > section:nth-child(2) .card-lux, main > section:nth-child(3) .card-lux, main > section:nth-child(4) .card-lux, main > section:nth-child(6) .card-lux, main > section:nth-child(8) .card-lux, main > section:nth-child(10) .card-lux { background-color: #faf6f1; border-color: color-mix(in oklab, var(--gold) 35%, transparent); }
+#topo > div > p.eyebrow { margin-top: 1.25rem !important; }
+main > section#faixa-confianca > div:first-child { display: block !important; max-width: 100%; overflow: hidden; background: linear-gradient(100deg, #5a3826 0%, #8d5d3e 45%, #68432f 100%) !important; border-top: 1px solid rgb(226 189 152 / 42%); border-bottom: 1px solid rgb(226 189 152 / 42%); }
+main > section#faixa-confianca > div:first-child .marquee-track { animation-duration: 18s !important; }
+main > section#faixa-confianca > div:first-child span { color: #f4dfc9 !important; }
+main > section#faixa-confianca > div:first-child svg { color: #e7c39f !important; }
+main > section#faixa-confianca > div:nth-child(2) { display: none !important; }
+#topo img[alt*="Millard"] { width: 11rem; max-width: 70vw; }
+@media (min-width: 640px) { #topo img[alt*="Millard"] { width: 15rem; } }
+#duvidas img[alt="Logomarca Millard"] { width: 8rem; height: 6.5rem; display: none !important; }
+footer img[alt*="Millard"] { width: 9rem; height: 7.5rem; }
+main > section:nth-child(9) img[alt=""] { mix-blend-mode: screen; object-fit: contain; }
+.lucide-star { color: #f4c542 !important; fill: #f4c542 !important; stroke: #f4c542 !important; }
+#sobre img[alt*="Sandra Millard"] { display: none; }
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\] { min-height: 19rem; display: flex; align-items: center; justify-content: center; border-radius: 1.5rem; background: linear-gradient(145deg, #14110f, #211b17); overflow: hidden; }
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::after { content: "Foto de Sandra Millard"; position: relative; z-index: 2; color: #e2bd98; font-family: var(--font-display); font-size: 1.35rem; letter-spacing: 0.04em; text-align: center; }
+#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::before { content: ""; position: absolute; inset: 0.6rem; border: 1px solid color-mix(in oklab, var(--gold) 50%, transparent); border-radius: 1.1rem; }
 
-main > section:nth-child(1),
-main > section:nth-child(5),
-main > section:nth-child(7),
-main > section:nth-child(9),
-footer {
-  background-color: #080808;
-}
+/* Refinamentos solicitados: laserterapia como especialidade, imagem acima dos cards e estética sempre clara. */
+#laserterapia { background-color: #faf6f1 !important; }
+#laserterapia > div > div:last-child { display: flex !important; flex-direction: column !important; align-items: stretch !important; gap: 2rem !important; }
+#laserterapia > div > div:last-child > div:first-child { order: 1 !important; width: 100% !important; }
+#laserterapia > div > div:last-child > div:last-child { order: 2 !important; width: 100% !important; text-align: center !important; }
+#laserterapia > div > div:last-child > div:first-child > div { max-width: 48rem !important; margin-inline: auto !important; }
+#laserterapia > div > div:last-child > div:last-child > p:first-child { max-width: 52rem; margin-inline: auto; }
+#laserterapia .grid.sm\:grid-cols-2 { max-width: 58rem; margin-inline: auto; }
+#laserterapia .rounded-2xl { background: rgba(255,253,249,0.9) !important; }
 
-main > section#faixa-confianca {
-  background-color: #faf6f1 !important;
-  padding-top: 0;
-  padding-bottom: 0;
-}
+/* Copy refinada sem alterar a estrutura da seção. */
+#laserterapia h2 { font-size: 0 !important; }
+#laserterapia h2::after { content: "Especialidade em Laserterapia"; font-size: 2rem; line-height: 1.1; }
+#laserterapia > div > div:last-child > div:last-child > p:first-child { font-size: 0 !important; }
+#laserterapia > div > div:last-child > div:last-child > p:first-child::after { content: "Tecnologia e cuidado individualizado para protocolos de laserterapia planejados de acordo com as necessidades e objetivos de cada paciente."; display: block; font-size: 1rem; line-height: 1.7; color: #6e5d51; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(1) p { font-size: 0 !important; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(1) p::after { content: "A tecnologia é aplicada de forma direcionada, seguindo um protocolo definido após a avaliação. Cada atendimento é planejado de acordo com o objetivo e as características de cada paciente."; font-size: 0.875rem; line-height: 1.65; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(2) p { font-size: 0 !important; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(2) p::after { content: "A proposta é proporcionar uma experiência confortável. A sensação pode variar conforme o protocolo e a sensibilidade individual, por isso a avaliação é importante para orientar cada caso."; font-size: 0.875rem; line-height: 1.65; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(3) p { font-size: 0 !important; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(3) p::after { content: "Os benefícios dependem do protocolo indicado. A laserterapia pode integrar cuidados estéticos e protocolos personalizados conforme a avaliação profissional."; font-size: 0.875rem; line-height: 1.65; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(4) p { font-size: 0 !important; }
+#laserterapia .grid.sm\:grid-cols-2 > article:nth-child(4) p::after { content: "Na Millard, tecnologia, avaliação individual e acompanhamento caminham juntos para construir um protocolo personalizado e uma experiência acolhedora."; font-size: 0.875rem; line-height: 1.65; }
 
-main > section:nth-child(2) .card-lux,
-main > section:nth-child(3) .card-lux,
-main > section:nth-child(4) .card-lux,
-main > section:nth-child(6) .card-lux,
-main > section:nth-child(8) .card-lux,
-main > section:nth-child(10) .card-lux {
-  background-color: #faf6f1;
-  border-color: color-mix(in oklab, var(--gold) 35%, transparent);
-}
+/* Estética: seção completamente clara, sem blocos escuros herdados. */
+#servicos { background-color: #faf6f1 !important; color: #2a211c !important; }
+#servicos .card-lux { background-color: #fffdf9 !important; color: #2a211c; }
+#servicos .absolute { color: #f0d0ad; }
 
-#topo > div > p.eyebrow {
-  margin-top: 1.25rem !important;
-}
+/* Antes e depois: mantém o fundo geral escuro e reserva áreas bege para as fotos. */
+#antes-e-depois { background-color: #0b0b0b !important; }
+#antes-e-depois article > div { background: #eee5dc !important; }
+#antes-e-depois article > div .text-gold-deep,
+#antes-e-depois article > div p { color: #6e5d51 !important; }
+#antes-e-depois article > div svg { color: #9c704d !important; }
+#antes-e-depois article { background-color: #eee5dc !important; }
 
-main > section#faixa-confianca > div:first-child {
-  display: block !important;
-  max-width: 100%;
-  overflow: hidden;
-  background: linear-gradient(100deg, #5a3826 0%, #8d5d3e 45%, #68432f 100%) !important;
-  border-top: 1px solid rgb(226 189 152 / 42%);
-  border-bottom: 1px solid rgb(226 189 152 / 42%);
-}
-
-main > section#faixa-confianca > div:first-child .marquee-track {
-  animation-duration: 18s !important;
-}
-
-main > section#faixa-confianca > div:first-child span {
-  color: #f4dfc9 !important;
-}
-
-main > section#faixa-confianca > div:first-child svg {
-  color: #e7c39f !important;
-}
-
-main > section#faixa-confianca > div:nth-child(2) {
-  display: none !important;
-}
-
-#topo img[alt*="Millard"] {
-  width: 11rem;
-  max-width: 70vw;
-}
 @media (min-width: 640px) {
-  #topo img[alt*="Millard"] { width: 15rem; }
-}
-
-#duvidas img[alt="Logomarca Millard"] {
-  width: 8rem;
-  height: 6.5rem;
-  display: none !important;
-}
-
-footer img[alt*="Millard"] {
-  width: 9rem;
-  height: 7.5rem;
-}
-
-main > section:nth-child(9) img[alt=""] {
-  mix-blend-mode: screen;
-  object-fit: contain;
-}
-
-.lucide-star {
-  color: #f4c542 !important;
-  fill: #f4c542 !important;
-  stroke: #f4c542 !important;
-}
-
-#sobre img[alt*="Sandra Millard"] {
-  display: none;
-}
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\] {
-  min-height: 19rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 1.5rem;
-  background: linear-gradient(145deg, #14110f, #211b17);
-  overflow: hidden;
-}
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::after {
-  content: "Foto de Sandra Millard";
-  position: relative;
-  z-index: 2;
-  color: #e2bd98;
-  font-family: var(--font-display);
-  font-size: 1.35rem;
-  letter-spacing: 0.04em;
-  text-align: center;
-}
-#sobre .relative.mx-auto.w-full.max-w-\[19rem\]::before {
-  content: "";
-  position: absolute;
-  inset: 0.6rem;
-  border: 1px solid color-mix(in oklab, var(--gold) 50%, transparent);
-  border-radius: 1.1rem;
+  #laserterapia h2::after { font-size: 2.35rem; }
+  #laserterapia > div > div:last-child > div:last-child > p:first-child::after { font-size: 1.08rem; }
 }
