@@ -164,14 +164,6 @@ main > section:nth-child(9) img[alt=""] { mix-blend-mode: screen; object-fit: co
 #servicos .card-lux { background-color: #fffdf9 !important; color: #2a211c; }
 #servicos .absolute { color: #f0d0ad; }
 
-/* Antes e depois: mantém o fundo geral escuro e reserva áreas bege para as fotos. */
-#antes-e-depois { background-color: #0b0b0b !important; }
-#antes-e-depois article > div { background: #eee5dc !important; }
-#antes-e-depois article > div .text-gold-deep,
-#antes-e-depois article > div p { color: #6e5d51 !important; }
-#antes-e-depois article > div svg { color: #9c704d !important; }
-#antes-e-depois article { background-color: #eee5dc !important; }
-
 @media (min-width: 640px) {
   #laserterapia h2::after { font-size: 2.35rem; }
   #laserterapia > div > div:last-child > div:last-child > p:first-child::after { font-size: 1.08rem; }
